@@ -127,7 +127,7 @@ public class BaseClass {
 		//driver.manage().window().maximize();
 		//((HasDevTools) driver).getDevTools().send(Network.clearBrowserCookies());
 		//((HasDevTools) driver).getDevTools().send(Network.clearBrowserCache());
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(300));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(120));
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(120));
 		
