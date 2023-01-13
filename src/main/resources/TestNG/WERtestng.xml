@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Equity Rating module">
+
+<parameter name="browserName" value="chrome"/>
+<parameter name="environment" value="Test"/>
+ <test name="WELL-WER" >
+<parameter name="SheetName" value="Wer"/>
+<parameter name="rowNum" value="2"/>
+<parameter name="Country" value="US"/>
+<classes>
+<class name="com.Well.testcases.login.TC_01_LoginTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_02_RegisterAndValidateTest"></class>
+ <class name="com.Well.testcases.Equity.Equity_TC_03_SubscribeAndStoreIdTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_04_SearchByIdTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_04A_SearchByRegisteredStatusTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_18_DashboardTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_05_DownloadBillingAndValidateTest"></class>
+ <class name="com.Well.testcases.Equity.Equity_TC_06_WerProjectFieldValidationTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_07_LocationTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_08_ScoreCardTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_09_ReviewTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_10_DocumentTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_11_AlternativesTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_12_EditTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_13_PromotionTest"></class> 
+<class name="com.Well.testcases.Equity.Equity_TC_14_ProfileTest"></class> 
+<class name="com.Well.testcases.Equity.Equity_TC_15_AddMemberTeamTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_15A_ValidateProjectAccessTeamTest"></class>
+<class name="com.Well.testcases.Equity.Equity_TC_16_ErrorNegativeAssertTest"></class> 
+<class name="com.Well.testcases.Equity.Equity_TC_17_SearchByAchievedStatusTest"></class>
+</classes>
+</test>
+
+</suite>  

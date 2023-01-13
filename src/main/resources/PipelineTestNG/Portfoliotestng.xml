@@ -1,0 +1,70 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Portfolio module">
+
+	<parameter name="browserName" value="chrome" />
+	<parameter name="environment" value="Test" />
+	    <test name="WELL-At-Scale">
+		<parameter name="SheetName" value="Portfolio" />
+		<parameter name="rowNum" value="2" />
+		<parameter name="Country" value="US"/>
+		<classes>
+		<class name="com.Well.testcases.login.TC_01_LoginTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_02_RegisterPortfolioTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_03_SearchPortfolioByIdTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_04_SignAndSubscribePortfolioTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_05_PortfolioPaymentTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_05A_PortfolioValidateBillingReceiptTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_06_PortfolioLocationImportTest"></class> 
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_07_PortfolioScorecardTest"></class> 
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_15_AddLocationTest"></class>
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_08_DocumentTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_09_ReviewTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_10_PortfolioProjectFieldValidationTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_11_SupportTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_12_AlternativesTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_14_EditTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_13_AddTeamMemberTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_13A_ValidateProjectAccessTeamTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_16_ErrorNegativeAssertTest"></class>
+		 </classes>
+	</test> 
+	
+	 <test name="WELL-At-Scale-Custom">
+		<parameter name="SheetName" value="Portfolio" />
+		<parameter name="rowNum" value="3" />
+		<parameter name="Country" value="US"/>
+		<classes>
+		<class name="com.Well.testcases.login.TC_01_LoginTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_02_RegisterPortfolioTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_03_SearchPortfolioByIdTest"></class>
+	   <class name="com.Well.testcases.Portfolio.Portfolio_TC_04_SignAndSubscribePortfolioTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_05_PortfolioPaymentTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_05A_PortfolioValidateBillingReceiptTest"></class> 
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_06_PortfolioLocationImportTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_CTC_01_FeatureTest"></class>
+	   <class name="com.Well.testcases.Portfolio.Portfolio_CTC_02_DocumentTest"></class> 
+	   <class name="com.Well.testcases.Portfolio.Portfolio_TC_16_ErrorNegativeAssertTest"></class>
+		</classes> 
+	</test>  
+	
+	   <test name="WELL-At-Scale-Filter">
+		<parameter name="SheetName" value="Portfolio" />
+		<parameter name="rowNum" value="4" />
+		<parameter name="Country" value="US"/>
+		<classes>
+		<class name="com.Well.testcases.login.TC_01_LoginTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_02_RegisterPortfolioTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_03_SearchPortfolioByNSStatusTest"></class>
+		<class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_08_DashboardTest"></class>
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_04_SignAndSubscribePortfolioTest"></class> 
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_05_SearchPortfolioByInProgressStatusTest"></class> 
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_06_PortfolioPaymentTest"></class> 
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_09_ResourceTest"></class>
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_SF_07_SearchPortfolioBySubscribedStatusTest"></class> 
+	    <class name="com.Well.testcases.Portfolio.Portfolio_TC_16_ErrorNegativeAssertTest"></class>
+	    
+		</classes> 
+	</test> 
+</suite>  

@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="PerformanceRating module">
+
+<parameter name="browserName" value="chrome"/>
+<parameter name="environment" value="TEST"/>
+
+ <test name="WELL-WPR" >
+<parameter name="SheetName" value="Wpr"/>
+<parameter name="rowNum" value="2"/>
+<parameter name="Country" value="US"/>
+<classes>
+<class name="com.Well.testcases.login.TC_01_LoginTest"></class>
+<class name="com.Well.testcases.Performance.Performance_TC_02_RegisterPerformanceTest"></class>
+<class name="com.Well.testcases.Performance.Performance_TC_03_SubscribeAndStoreIdTest"></class>
+ <class name="com.Well.testcases.Performance.Performance_TC_04_SearchPerformanceByIdTest"></class>
+ <class name="com.Well.testcases.Performance.Performance_TC_04A_SearchPerformanceByStatusTest"></class>
+<class name="com.Well.testcases.Performance.Performance_TC_19_DashboardTest"></class>
+ <class name="com.Well.testcases.Performance.Performance_TC_05_WprProjectFieldValidationTest"></class>
+ <class name="com.Well.testcases.Performance.Performance_TC_06_LocationTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_07_ScorecardTest"></class>
+   <class name="com.Well.testcases.Performance.Performance_TC_08_ReviewTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_09_DocumentTest"></class>
+ <class name="com.Well.testcases.Performance.Performance_TC_10_AlternativesTest"></class>
+   <class name="com.Well.testcases.Performance.Performance_TC_12_EditTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_13_PromotionTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_14_ProfileTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_15_AddLocationTest"></class>
+   <class name="com.Well.testcases.Performance.Performance_TC_16_DownloadBillingAndValidateTest"></class>
+   <class name="com.Well.testcases.Performance.Performance_TC_11_AddMemberTeamTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_11A_ValidateProjectAccessTeamTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_17_ErrorNegativeAssertTest"></class>
+  <class name="com.Well.testcases.Performance.Performance_TC_18_SearchPerformanceByStatusTest"></class>
+</classes>
+</test>
+</suite>  
