@@ -1,4 +1,4 @@
-Feature: Validating Hireprous login page
+Feature: F01_Validating Nop login page
 
   #Scenario-1
   @SmokeTest
