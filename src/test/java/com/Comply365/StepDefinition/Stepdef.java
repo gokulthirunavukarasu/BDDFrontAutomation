@@ -1,5 +1,6 @@
 package com.Comply365.StepDefinition;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.TakesScreenshot;
@@ -8,6 +9,8 @@ import org.zaproxy.clientapi.core.ClientApiException;
 
 import com.Comply365.Engine.BaseClass;
 import com.Comply365.Engine.CommonMethod;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
 import io.cucumber.java.After;
@@ -21,11 +24,14 @@ import io.cucumber.java.en.When;
 public class Stepdef extends BaseClass  {
 	
 	@After
-	public void addScreenshot(Scenario scenario) {
+	public void addScreenshot(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
 			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "image");
 		}
+		driver.quit();
+		FileUtils.cleanDirectory(new File(downloadPath)); 
+		System.out.println("EndTest");
 	}
 	
 	@Given("User is on Hireprous login page")
@@ -47,5 +53,4 @@ public class Stepdef extends BaseClass  {
 	public void user_login_must_be_successful() throws InterruptedException, IOException {
 		 CommonMethod.WaitUntilVisibility("SuccessfulLogin", 300);
 	}
-
 }

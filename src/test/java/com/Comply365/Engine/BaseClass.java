@@ -85,20 +85,19 @@ public class BaseClass {
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/Environment.properties");
 		prop.load(file);
 		String environment=prop.getProperty("environment");
-			System.out.println(environment);
 			return environment;
 	}
 
 	@BeforeMethod
 	public void setup() throws InterruptedException, IOException, ClientApiException {
 		data= new XlsReader(System.getProperty("user.dir")+"/TestData.xlsx");
+		System.out.println("StartTest");
+		System.out.println("browserName: "+browserName());
 		if (browserName().equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			
 		} else if (browserName().equalsIgnoreCase("chrome")) {
-			
-			
 			ChromeOptions options = new ChromeOptions();
 			WebDriverManager.chromedriver().setup();
 			Map<String, Object> prefs = new HashMap<String, Object>();
@@ -130,40 +129,24 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(120));
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(120));
-		
 		Properties prop = new Properties();
 		prop= new Properties();
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/Environment.properties");
-
 		prop.load(file);
 		String qasurl=prop.getProperty("ENV_QAS");
 		String stgurl=prop.getProperty("ENV_STAGING");
 		String testurl=prop.getProperty("ENV_TEST");
-		
-	
-		
+		System.out.println("environment: "+environment());
 		if(environment().equalsIgnoreCase("QAS")){
-			
 			driver.get(qasurl);
-			
 		}
 		else if(environment().equalsIgnoreCase("STG")){
 			driver.get(stgurl);
-			
 		}
 		else if(environment().equalsIgnoreCase("TEST")){
-			
-			
-			driver.get(testurl);
-			
-		
-			
+			System.out.println("BaseUrl: "+ testurl);
+			driver.get(testurl);	
 		}
-		
-		Thread.sleep(2000);
-		
-		
-	
 	}
 	@BeforeTest(alwaysRun = true)
 	public void getTestNGTestName(final ITestContext testContext) {
