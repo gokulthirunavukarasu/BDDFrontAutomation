@@ -67,6 +67,7 @@ public class BaseClass {
 	public static String SamplePdffile = System.getProperty("user.dir") +File.separator +"src"+File.separator +"main"+File.separator +"resources"+File.separator +"Files"+File.separator +"Resume.pdf";
 	public static Faker USfaker = new Faker(new Locale("en-US"));
 	public static String downloadPath = System.getProperty("user.dir") +File.separator +"Downloads"+File.separator;
+	public static String reportPath = System.getProperty("user.dir") +File.separator +"Reports"+File.separator;
 	//public static ReusableMethodsLogin login = new ReusableMethodsLogin();
 	 
 	public String browserName() throws IOException{

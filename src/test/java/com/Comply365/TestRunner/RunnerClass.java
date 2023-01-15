@@ -10,9 +10,7 @@ import io.cucumber.junit.Cucumber;
 monochrome=true,
 plugin={"pretty","junit:JunitReports/report.xml",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-tags="@SmokeTest"
-
-)
+tags="@SmokeTest")
 
 
 

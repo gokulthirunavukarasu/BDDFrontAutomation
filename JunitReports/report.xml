@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="22.917">
-    <testcase classname="F01_Validating Nop login page" name="Login to application with valid user credentials" time="22.566">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="14.667">
+    <testcase classname="F01_Validating Nop login page" name="Login to application with valid user credentials" time="14.452">
         <system-out><![CDATA[Given User is on Hireprous login page.......................................passed
 When User enters username and password......................................passed
 And User clicks on Log IN button............................................passed

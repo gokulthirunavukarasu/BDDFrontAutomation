@@ -14,6 +14,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -22,7 +23,10 @@ import io.cucumber.java.en.When;
 
 
 public class Stepdef extends BaseClass  {
-	
+	@Before
+	public void deleteDir()  throws IOException {
+		FileUtils.cleanDirectory(new File(reportPath)); 	
+	}
 	@After
 	public void addScreenshot(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
@@ -30,6 +34,7 @@ public class Stepdef extends BaseClass  {
 			scenario.attach(screenshot, "image/png", "image");
 		}
 		driver.quit(); 
+		
 		System.out.println("EndTest");
 	}
 	
