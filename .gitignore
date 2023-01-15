@@ -2,7 +2,7 @@ target/
 logs/
 test-output/*
 output/
-Report/
+Reports/
 Screenshots/
 bin/
 Downloads/
