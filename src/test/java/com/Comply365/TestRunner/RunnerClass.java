@@ -6,9 +6,9 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features={"src/test/resources/Features"},  glue={"com.Comply365.StepDefinition"},
+@CucumberOptions(features={"src/test/resources/Features/F01_Login.feature"},  glue={"com.Comply365.StepDefinition"},
 monochrome=true,
-plugin={"pretty","junit:target/JunitReports/report.xml",
+plugin={"pretty","junit:JunitReports/report.xml",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 tags="@SmokeTest"
 
