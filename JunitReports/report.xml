@@ -1,10 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="14.667">
-    <testcase classname="F01_Validating Nop login page" name="Login to application with valid user credentials" time="14.452">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="24.681">
+    <testcase classname="F01_Validating Nop login page" name="Login to application with valid user credentials" time="24.315">
         <system-out><![CDATA[Given User is on Hireprous login page.......................................passed
 When User enters username and password......................................passed
 And User clicks on Log IN button............................................passed
 Then User login must be successful..........................................passed
 ]]></system-out>
+    </testcase>
+    <testcase classname="F02_Create Customer" name="Create and Validating Customer" time="0.028">
+        <failure message="Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'PRO-NAGESH', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, executeScript {script=var callback = arguments[arguments.length - 1];var xhr = new XMLHttpRequest();xhr.open('GET', '/Ajax_call', true);xhr.onreadystatechange = function() {  if (xhr.readyState == 4) {    callback(xhr.responseText);  }};xhr.send();, args=[]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.74, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\PROMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63487}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63487/devtoo..., se:cdpVersion: 109.0.5414.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[Given User navigate to the Dashboard page by logging in to nopCommerce......failed
+When User clicks on Customers tab...........................................skipped
+And User clicks on Add new button...........................................skipped
+And User enters data to the Customer info fields............................skipped
+And User clicks on save button..............................................skipped
+Then User will be redirected to Customers list page successfully............skipped
+And User verifies created customer in Customers list........................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'PRO-NAGESH', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, executeScript {script=var callback = arguments[arguments.length - 1];var xhr = new XMLHttpRequest();xhr.open('GET', '/Ajax_call', true);xhr.onreadystatechange = function() {  if (xhr.readyState == 4) {    callback(xhr.responseText);  }};xhr.send();, args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.74, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\PROMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63487}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63487/devtoo..., se:cdpVersion: 109.0.5414.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:503)
+	at com.Comply365.Engine.JSWaiter.ajaxComplete(JSWaiter.java:25)
+	at com.Comply365.Engine.JSWaiter.waitAllRequest(JSWaiter.java:146)
+	at com.Comply365.Engine.CommonMethod.WaitUntilPresence(CommonMethod.java:1738)
+	at com.Comply365.StepDefinition.Stepdef.user_navigate_to_the_dashboard_page_by_logging_in_to_nopCommerce(Stepdef.java:64)
+	at ✽.User navigate to the Dashboard page by logging in to nopCommerce(file:///E:/BDDProject/BDDFrontEndAutomation/src/test/resources/Features/F02_CreateCustomer.feature:14)
+]]></failure>
+    </testcase>
+    <testcase classname="F03_Logout" name="Validating logout functionlity" time="0.017">
+        <failure message="Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'PRO-NAGESH', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, executeScript {script=var callback = arguments[arguments.length - 1];var xhr = new XMLHttpRequest();xhr.open('GET', '/Ajax_call', true);xhr.onreadystatechange = function() {  if (xhr.readyState == 4) {    callback(xhr.responseText);  }};xhr.send();, args=[]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.74, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\PROMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63487}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63487/devtoo..., se:cdpVersion: 109.0.5414.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[Given User navigate to the Dashboard page by logging in to nopCommerce......failed
+When User clicks on Logout button...........................................skipped
+Then User will be redirected to Login page successfully.....................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'PRO-NAGESH', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, executeScript {script=var callback = arguments[arguments.length - 1];var xhr = new XMLHttpRequest();xhr.open('GET', '/Ajax_call', true);xhr.onreadystatechange = function() {  if (xhr.readyState == 4) {    callback(xhr.responseText);  }};xhr.send();, args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.74, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\PROMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63487}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63487/devtoo..., se:cdpVersion: 109.0.5414.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:503)
+	at com.Comply365.Engine.JSWaiter.ajaxComplete(JSWaiter.java:25)
+	at com.Comply365.Engine.JSWaiter.waitAllRequest(JSWaiter.java:146)
+	at com.Comply365.Engine.CommonMethod.WaitUntilPresence(CommonMethod.java:1738)
+	at com.Comply365.StepDefinition.Stepdef.user_navigate_to_the_dashboard_page_by_logging_in_to_nopCommerce(Stepdef.java:64)
+	at ✽.User navigate to the Dashboard page by logging in to nopCommerce(file:///E:/BDDProject/BDDFrontEndAutomation/src/test/resources/Features/F03_Logout.feature:14)
+]]></failure>
     </testcase>
 </testsuite>

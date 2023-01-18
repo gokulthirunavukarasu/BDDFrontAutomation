@@ -24,20 +24,17 @@ import io.cucumber.java.en.When;
 
 
 public class Stepdef extends BaseClass  {
-	//	@Before
-	//	public void deleteDir()  throws IOException {
-	//		FileUtils.cleanDirectory(new File(reportPath)); 	
-	//	}
-	//	@After
-	//	public void addScreenshot(Scenario scenario) throws IOException {
-	//		if (scenario.isFailed()) {
-	//			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-	//			scenario.attach(screenshot, "image/png", "image");
-	//		}
-	//		driver.quit(); 
-	//		
-	//		System.out.println("EndTest");
-	//	}
+		
+		@After
+		public void addScreenshot(Scenario scenario) throws IOException {
+			if (scenario.isFailed()) {
+				final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+				scenario.attach(screenshot, "image/png", "image");
+			}
+//			driver.quit(); 
+			
+			System.out.println("EndTest");
+		}
 
 	@Given("User is on Hireprous login page")
 	public void user_is_on_hireprous_login_page() throws InterruptedException, IOException, ClientApiException {
